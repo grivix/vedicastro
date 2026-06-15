@@ -15,23 +15,27 @@
 body{
 margin:0;
 background:#030712;
-color:#F8FAFC;
+color:#E5E7EB;
 font-family:Inter, sans-serif;
 overflow-x:hidden;
 }
 
-/* Background Atmosphere */
-.bg-glow{
+h1,h2,h3{
+font-family:"Cormorant Garamond", serif;
+}
+
+/* Background */
+.bg{
 position:fixed;
 inset:0;
 background:
-radial-gradient(circle at 20% 20%, rgba(251,191,36,0.10), transparent 40%),
-radial-gradient(circle at 80% 30%, rgba(217,119,6,0.08), transparent 45%),
+radial-gradient(circle at 20% 20%, rgba(251,191,36,0.06), transparent 40%),
+radial-gradient(circle at 80% 30%, rgba(59,130,246,0.05), transparent 40%),
 radial-gradient(circle at 50% 80%, rgba(255,255,255,0.03), transparent 50%);
 z-index:-1;
 }
 
-/* Glass Card */
+/* Glass */
 .glass{
 background:rgba(15,23,42,0.55);
 backdrop-filter:blur(18px);
@@ -46,13 +50,13 @@ background:linear-gradient(90deg,#FDE68A,#FBBF24,#D97706);
 -webkit-text-fill-color:transparent;
 }
 
-/* Button */
+/* Buttons */
 .btn-gold{
 background:linear-gradient(135deg,#FDE68A,#FBBF24,#D97706);
 color:#111827;
-font-weight:600;
-padding:14px 28px;
+padding:14px 26px;
 border-radius:999px;
+font-weight:600;
 transition:0.3s;
 }
 
@@ -60,38 +64,48 @@ transition:0.3s;
 transform:translateY(-2px);
 }
 
-/* Font */
-h1,h2,h3{
-font-family:"Cormorant Garamond", serif;
+.btn-outline{
+border:1px solid rgba(255,255,255,0.15);
+padding:14px 26px;
+border-radius:999px;
+transition:0.3s;
+}
+
+.btn-outline:hover{
+border-color:#FBBF24;
+color:#FBBF24;
+}
+
+section{
+padding:120px 20px;
+max-width:1100px;
+margin:auto;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="bg-glow"></div>
+<div class="bg"></div>
 
 <!-- NAV -->
 <header class="fixed w-full top-0 z-50 bg-black/30 backdrop-blur-xl border-b border-white/5">
 
-<div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+<div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
 
-<h1 class="text-xl tracking-[0.35em] text-amber-300 font-semibold">
+<div class="text-amber-300 tracking-[0.3em]">
 VEDICAURA
-</h1>
+</div>
 
-<nav class="hidden md:flex gap-10 text-sm text-gray-300">
-
-<a href="#services" class="hover:text-amber-300">Services</a>
-<a href="#process" class="hover:text-amber-300">Process</a>
-<a href="#apply" class="hover:text-amber-300">Apply</a>
-
-</nav>
+<div class="hidden md:flex gap-8 text-sm text-gray-300">
+<a href="#services">Services</a>
+<a href="#process">Process</a>
+<a href="#apply">Apply</a>
+</div>
 
 <button class="btn-gold">
-Request Assessment
+Request Analysis
 </button>
 
 </div>
@@ -99,363 +113,155 @@ Request Assessment
 </header>
 
 <!-- HERO -->
-<section class="min-h-screen flex items-center justify-center px-6 pt-32">
+<section class="text-center pt-[160px]">
 
-<div class="max-w-4xl text-center">
+<h1 class="text-5xl md:text-6xl leading-tight text-white">
+Ancient Vedic Insight<br>
+<span class="gold">For Modern Life Decisions</span>
+</h1>
 
-<h2 class="text-5xl md:text-6xl leading-tight">
-<span class="gold">
-Ancient Vedic Insight
-</span>
-<br>
-Modern Life Clarity
-</h2>
-
-<p class="mt-6 text-gray-400 text-lg leading-relaxed">
-Private Vedic chart assessments designed to help you understand career direction, relationships, finances, health patterns, and life transitions through structured planetary analysis.
+<p class="mt-6 text-gray-400 max-w-2xl mx-auto">
+Private Vedic chart analysis designed to give clarity on career, relationships, finances, and life direction through structured astrological intelligence.
 </p>
 
-<div class="mt-10 flex flex-col md:flex-row gap-4 justify-center">
+<div class="mt-10 flex flex-col md:flex-row justify-center gap-4">
 
-<button class="btn-gold">
-Request Private Assessment
-</button>
-
-<button class="glass px-8 py-4">
-Learn How It Works
-</button>
-
-</div>
+<button class="btn-gold">Request Private Assessment</button>
+<button class="btn-outline">How It Works</button>
 
 </div>
 
 </section>
 
-<!-- TRUST STRIP -->
-<section class="px-6 pb-20">
-
-<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 text-center">
+<!-- TRUST -->
+<section class="grid md:grid-cols-3 gap-6 text-center">
 
 <div class="glass p-6">Private & Confidential</div>
-<div class="glass p-6">Global Clients (USA, UK, AU)</div>
-<div class="glass p-6">Structured Written Reports</div>
-
-</div>
+<div class="glass p-6">Global Clients (USA / UK / AU)</div>
+<div class="glass p-6">Structured Reports</div>
 
 </section>
-<!-- ========================= -->
-<!-- CORE SERVICE -->
-<!-- ========================= -->
 
-<section id="services" class="px-6 py-28">
+<!-- SERVICES -->
+<section id="services">
 
-<div class="max-w-6xl mx-auto text-center">
-
-<h2 class="text-4xl md:text-5xl">
-<span class="gold">Private Vedic Chart Assessment</span>
+<h2 class="text-4xl text-center">
+<span class="gold">Private Chart Assessment</span>
 </h2>
 
-<p class="mt-6 text-gray-400 max-w-3xl mx-auto leading-relaxed">
-A structured, private analysis of your birth chart designed to provide clarity on life direction, decision-making, and timing across key areas of life.
+<p class="text-center text-gray-400 mt-4 max-w-2xl mx-auto">
+One complete analysis of your life path, timing cycles, strengths, challenges, and opportunities.
 </p>
 
-</div>
-
-<div class="max-w-5xl mx-auto mt-16 grid md:grid-cols-2 gap-8">
+<div class="grid md:grid-cols-2 gap-6 mt-12">
 
 <div class="glass p-8">
-
-<h3 class="text-2xl mb-4">What You Receive</h3>
-
-<ul class="space-y-3 text-gray-300 text-sm leading-relaxed">
-
-<li>• Complete Vedic birth chart interpretation</li>
-<li>• Career & professional direction analysis</li>
-<li>• Relationship & marriage guidance</li>
-<li>• Financial & stability indicators</li>
-<li>• Health & lifestyle patterns</li>
-<li>• Key life timing cycles (Dasha analysis)</li>
-<li>• Written private report (PDF)</li>
-
+<h3 class="text-xl text-white mb-4">What You Get</h3>
+<ul class="text-gray-400 space-y-2 text-sm">
+<li>• Career & Business Guidance</li>
+<li>• Relationship Analysis</li>
+<li>• Financial Patterns</li>
+<li>• Health Insights</li>
+<li>• Life Timing Cycles</li>
+<li>• Private PDF Report</li>
 </ul>
-
 </div>
 
 <div class="glass p-8">
-
-<h3 class="text-2xl mb-4">Ideal For</h3>
-
-<ul class="space-y-3 text-gray-300 text-sm">
-
-<li>• Career uncertainty or transition</li>
-<li>• Relationship clarity</li>
-<li>• Business decision timing</li>
-<li>• Relocation decisions (USA / Australia / UK)</li>
-<li>• Life direction confusion</li>
-<li>• Long-term planning alignment</li>
-
+<h3 class="text-xl text-white mb-4">Best For</h3>
+<ul class="text-gray-400 space-y-2 text-sm">
+<li>Career confusion</li>
+<li>Relationship clarity</li>
+<li>Business decisions</li>
+<li>Relocation (USA / AU / UK)</li>
+<li>Life direction uncertainty</li>
 </ul>
-
 </div>
 
 </div>
 
 </section>
 
-<!-- ========================= -->
-<!-- PROCESS SECTION -->
-<!-- ========================= -->
+<!-- PROCESS -->
+<section id="process">
 
-<section id="process" class="px-6 py-28">
-
-<div class="max-w-6xl mx-auto text-center">
-
-<h2 class="text-4xl md:text-5xl">
+<h2 class="text-4xl text-center">
 <span class="gold">How It Works</span>
 </h2>
 
-<p class="mt-6 text-gray-400">
-A structured 4-step private advisory process
-</p>
+<div class="grid md:grid-cols-4 gap-4 mt-12 text-center">
 
-</div>
-
-<div class="max-w-5xl mx-auto mt-16 grid md:grid-cols-4 gap-6">
-
-<div class="glass p-6 text-center">
-<div class="text-amber-300 text-2xl">1</div>
-<p class="mt-3">Submit Application</p>
-</div>
-
-<div class="glass p-6 text-center">
-<div class="text-amber-300 text-2xl">2</div>
-<p class="mt-3">Chart Calculation</p>
-</div>
-
-<div class="glass p-6 text-center">
-<div class="text-amber-300 text-2xl">3</div>
-<p class="mt-3">Deep Analysis</p>
-</div>
-
-<div class="glass p-6 text-center">
-<div class="text-amber-300 text-2xl">4</div>
-<p class="mt-3">Private Report Delivery</p>
-</div>
-
-</div>
-
-<div class="max-w-4xl mx-auto mt-14 text-center text-gray-400 text-sm leading-relaxed">
-
-No confusion. No multiple packages. One structured assessment
-delivered privately with clarity and discretion.
+<div class="glass p-6">1<br>Submit Details</div>
+<div class="glass p-6">2<br>Chart Analysis</div>
+<div class="glass p-6">3<br>Deep Review</div>
+<div class="glass p-6">4<br>Report Delivered</div>
 
 </div>
 
 </section>
 
-<!-- ========================= -->
-<!-- TRUST SECTION -->
-<!-- ========================= -->
+<!-- APPLY -->
+<section id="apply">
 
-<section class="px-6 py-20">
-
-<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
-
-<div class="glass p-6 text-center">
-<p class="text-amber-300">Confidential</p>
-<p class="text-sm text-gray-400 mt-2">All data handled privately</p>
-</div>
-
-<div class="glass p-6 text-center">
-<p class="text-amber-300">Global Clients</p>
-<p class="text-sm text-gray-400 mt-2">USA • UK • Australia</p>
-</div>
-
-<div class="glass p-6 text-center">
-<p class="text-amber-300">Structured Reports</p>
-<p class="text-sm text-gray-400 mt-2">Clear actionable insights</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- ========================= -->
-<!-- START APPLICATION (PREVIEW FORM SECTION) -->
-<!-- ========================= -->
-
-<section id="apply" class="px-6 py-28">
-
-<div class="max-w-4xl mx-auto">
-
-<div class="text-center">
-
-<h2 class="text-4xl md:text-5xl">
-<span class="gold">Request Private Assessment</span>
+<h2 class="text-4xl text-center">
+<span class="gold">Request Assessment</span>
 </h2>
 
-<p class="mt-6 text-gray-400">
-Begin your confidential Vedic analysis request
-</p>
+<div class="glass p-10 mt-10 max-w-3xl mx-auto">
 
-</div>
+<form class="space-y-4">
 
-<div class="glass mt-12 p-10">
-
-<form class="space-y-6">
-
-<input type="text" placeholder="Full Name"
-class="w-full p-4 rounded-xl bg-black/40 border border-white/10">
-
-<input type="email" placeholder="Email Address"
-class="w-full p-4 rounded-xl bg-black/40 border border-white/10">
+<input class="w-full p-4 bg-black/40 border border-white/10 rounded-xl" placeholder="Full Name">
+<input class="w-full p-4 bg-black/40 border border-white/10 rounded-xl" placeholder="Email">
 
 <div class="grid md:grid-cols-2 gap-4">
-
-<input type="date"
-class="w-full p-4 rounded-xl bg-black/40 border border-white/10">
-
-<input type="time"
-class="w-full p-4 rounded-xl bg-black/40 border border-white/10">
-
+<input type="date" class="p-4 bg-black/40 border border-white/10 rounded-xl">
+<input type="time" class="p-4 bg-black/40 border border-white/10 rounded-xl">
 </div>
 
-<input type="text" placeholder="Birth City & Country"
-class="w-full p-4 rounded-xl bg-black/40 border border-white/10">
+<input class="w-full p-4 bg-black/40 border border-white/10 rounded-xl" placeholder="Birth City & Country">
 
-<select class="w-full p-4 rounded-xl bg-black/40 border border-white/10 text-gray-300">
-
-<option>Select Primary Focus Area</option>
-<option>Career Direction</option>
+<select class="w-full p-4 bg-black/40 border border-white/10 rounded-xl">
+<option>Career Guidance</option>
 <option>Marriage / Relationships</option>
 <option>Business Decisions</option>
 <option>Financial Growth</option>
-<option>Health & Vitality</option>
-<option>Life Direction Clarity</option>
-
+<option>Life Direction</option>
 </select>
 
-<textarea placeholder="Describe your current situation or questions..."
-class="w-full p-4 rounded-xl bg-black/40 border border-white/10 h-32"></textarea>
+<textarea class="w-full p-4 bg-black/40 border border-white/10 rounded-xl h-32" placeholder="Describe your situation"></textarea>
 
 <button class="btn-gold w-full">
 Submit for Private Review
 </button>
 
-<p class="text-xs text-gray-500 text-center mt-4">
-Your information is used only for chart analysis. No sharing. No tracking.
-</p>
-
 </form>
 
 </div>
 
-</div>
-
 </section>
-<!-- ========================= -->
-<!-- FINAL TRUST / FOOTER -->
-<!-- ========================= -->
 
-<footer class="px-6 py-20 border-t border-white/10">
+<!-- FOOTER -->
+<footer class="text-center py-20 border-t border-white/10">
 
-<div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
+<div class="text-amber-300 tracking-[0.3em]">VEDICAURA</div>
 
-<!-- BRAND -->
-<div>
-<h3 class="text-2xl tracking-[0.3em] text-amber-300">
-VEDICAURA
-</h3>
-
-<p class="text-gray-400 text-sm mt-4 leading-relaxed">
-Private Vedic Advisory providing structured life clarity through
-traditional astrological intelligence and personalized analysis.
+<p class="text-gray-500 text-sm mt-4">
+Private Vedic Advisory for Global Clients
 </p>
-</div>
 
-<!-- LINKS -->
-<div>
-<h4 class="text-amber-300 mb-4">Navigation</h4>
-<ul class="space-y-2 text-gray-400 text-sm">
-<li>Services</li>
-<li>Process</li>
-<li>Apply</li>
-<li>Contact</li>
-</ul>
-</div>
-
-<!-- LEGAL -->
-<div>
-<h4 class="text-amber-300 mb-4">Legal</h4>
-<ul class="space-y-2 text-gray-400 text-sm">
-<li>Privacy Policy</li>
-<li>Terms of Service</li>
-<li>Disclaimer</li>
-</ul>
-</div>
-
-<!-- CONTACT -->
-<div>
-<h4 class="text-amber-300 mb-4">Contact</h4>
-<ul class="space-y-2 text-gray-400 text-sm">
-<li>concierge@vedicaura.com</li>
-<li>Global Client Support</li>
-<li>Private Consultations</li>
-</ul>
-</div>
-
-</div>
-
-<div class="text-center mt-16 text-xs text-gray-600 tracking-[0.3em]">
-ILLUMINATING LIFE CLARITY THROUGH VEDIC INTELLIGENCE
-</div>
+<p class="text-gray-600 text-xs mt-10">
+ILLUMINATING LIFE THROUGH STRUCTURED VEDIC INTELLIGENCE
+</p>
 
 </footer>
 
-<!-- ========================= -->
-<!-- WHATSAPP FLOAT BUTTON -->
-<!-- ========================= -->
-
-<a href="https://wa.me/919999999999"
-target="_blank"
-class="fixed bottom-6 right-6 z-50">
-
-<div class="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-amber-400 flex items-center justify-center shadow-lg hover:scale-110 transition">
-
-<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="white" viewBox="0 0 24 24">
-<path d="M20.52 3.48A11.86 11.86 0 0012.06 0C5.5 0 .2 5.3.2 11.86c0 2.09.55 4.13 1.6 5.92L0 24l6.42-1.68a11.86 11.86 0 005.64 1.43h.01c6.56 0 11.86-5.3 11.86-11.86 0-3.15-1.23-6.11-3.41-8.41z"/>
-</svg>
-
+<!-- WHATSAPP -->
+<a href="https://wa.me/919999999999" class="fixed bottom-6 right-6">
+<div class="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center text-white">
+💬
 </div>
-
 </a>
-
-<!-- ========================= -->
-<!-- SIMPLE ANIMATION SCRIPT -->
-<!-- ========================= -->
-
-<script>
-
-// Smooth reveal on scroll
-const elements = document.querySelectorAll('.glass');
-
-const observer = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-if(entry.isIntersecting){
-entry.target.style.opacity = 1;
-entry.target.style.transform = "translateY(0px)";
-}
-});
-}, { threshold: 0.1 });
-
-elements.forEach(el => {
-el.style.opacity = 0;
-el.style.transform = "translateY(20px)";
-el.style.transition = "all 0.6s ease";
-observer.observe(el);
-});
-
-</script>
 
 </body>
 </html>
