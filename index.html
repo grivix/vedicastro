@@ -4,540 +4,197 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VedicAura | Elite Global Vedic Astrology & Sacred Rituals</title>
-
-<meta name="description" content="Private Vedic Astrology Consultations and Distance Sacred Rituals for discerning international clients.">
+<title>VedicAura | Private Vedic Advisory</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
-:root{
---gold-light:#FDE68A;
---gold:#FBBF24;
---gold-dark:#D97706;
---obsidian:#030712;
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
 body{
-font-family:'Plus Jakarta Sans',sans-serif;
+margin:0;
 background:#030712;
-color:white;
+color:#F8FAFC;
+font-family:Inter, sans-serif;
 overflow-x:hidden;
 }
 
-/* Animated Cosmic Background */
-
-.cosmic-bg{
+/* Background Atmosphere */
+.bg-glow{
 position:fixed;
 inset:0;
-z-index:-2;
 background:
-radial-gradient(circle at 15% 20%, rgba(251,191,36,.10), transparent 25%),
-radial-gradient(circle at 80% 25%, rgba(245,158,11,.08), transparent 30%),
-radial-gradient(circle at 50% 80%, rgba(251,191,36,.06), transparent 40%),
-#030712;
+radial-gradient(circle at 20% 20%, rgba(251,191,36,0.10), transparent 40%),
+radial-gradient(circle at 80% 30%, rgba(217,119,6,0.08), transparent 45%),
+radial-gradient(circle at 50% 80%, rgba(255,255,255,0.03), transparent 50%);
+z-index:-1;
 }
 
-.cosmic-bg::before{
-content:'';
-position:absolute;
-inset:0;
-background-image:
-radial-gradient(rgba(255,255,255,.20) 1px, transparent 1px);
-background-size:80px 80px;
-opacity:.06;
-animation: drift 40s linear infinite;
+/* Glass Card */
+.glass{
+background:rgba(15,23,42,0.55);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,0.08);
+border-radius:24px;
 }
 
-@keyframes drift{
-from{
-transform:translateY(0px);
-}
-to{
-transform:translateY(-80px);
-}
-}
-
-.gold-gradient{
-background:linear-gradient(
-90deg,
-#fde68a,
-#fbbf24,
-#d97706
-);
+/* Gold */
+.gold{
+background:linear-gradient(90deg,#FDE68A,#FBBF24,#D97706);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
-.gold-button{
-background:linear-gradient(
-135deg,
-#fde68a,
-#fbbf24,
-#d97706
-);
+/* Button */
+.btn-gold{
+background:linear-gradient(135deg,#FDE68A,#FBBF24,#D97706);
 color:#111827;
-font-weight:700;
-box-shadow:
-0 0 20px rgba(251,191,36,.25),
-0 0 60px rgba(251,191,36,.10);
-transition:.4s;
-}
-
-.gold-button:hover{
-transform:translateY(-3px);
-box-shadow:
-0 0 30px rgba(251,191,36,.35),
-0 0 90px rgba(251,191,36,.15);
-}
-
-.glass{
-background:rgba(15,23,42,.40);
-backdrop-filter:blur(24px);
-border:1px solid rgba(255,255,255,.08);
-}
-
-.luxury-card{
-transition:.5s ease;
-}
-
-.luxury-card:hover{
-transform:translateY(-10px);
-border-color:rgba(251,191,36,.4);
-box-shadow:
-0 25px 60px rgba(0,0,0,.45);
-}
-
-.section-padding{
-padding-top:10rem;
-padding-bottom:10rem;
-}
-
-.serif{
-font-family:'Cinzel',serif;
-}
-
-.hero-glow{
-position:absolute;
-width:500px;
-height:500px;
+font-weight:600;
+padding:14px 28px;
 border-radius:999px;
-background:radial-gradient(circle,
-rgba(251,191,36,.15),
-transparent 70%);
-filter:blur(70px);
-pointer-events:none;
+transition:0.3s;
 }
 
-.nav-link{
-position:relative;
-transition:.3s;
+.btn-gold:hover{
+transform:translateY(-2px);
 }
 
-.nav-link:hover{
-color:#fbbf24;
-}
-
-.nav-link::after{
-content:'';
-position:absolute;
-left:0;
-bottom:-6px;
-height:1px;
-width:0;
-background:#fbbf24;
-transition:.3s;
-}
-
-.nav-link:hover::after{
-width:100%;
-}
-
-.badge{
-background:rgba(255,255,255,.03);
-border:1px solid rgba(251,191,36,.25);
-backdrop-filter:blur(10px);
+/* Font */
+h1,h2,h3{
+font-family:"Cormorant Garamond", serif;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="cosmic-bg"></div>
+<div class="bg-glow"></div>
 
-<!-- ========================= -->
-<!-- HEADER -->
-<!-- ========================= -->
+<!-- NAV -->
+<header class="fixed w-full top-0 z-50 bg-black/30 backdrop-blur-xl border-b border-white/5">
 
-<header class="fixed top-0 left-0 w-full z-50 bg-black/20 backdrop-blur-xl border-b border-white/5">
+<div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
 
-<div class="max-w-7xl mx-auto px-6 lg:px-10">
-
-<div class="h-24 flex items-center justify-between">
-
-<!-- Logo -->
-
-<div class="flex items-center gap-4">
-
-<div class="w-12 h-12 border border-amber-400 rotate-45 rounded-xl"></div>
-
-<div>
-
-<h2 class="serif tracking-[0.35em] text-xl text-amber-300">
+<h1 class="text-xl tracking-[0.35em] text-amber-300 font-semibold">
 VEDICAURA
-</h2>
+</h1>
 
-</div>
+<nav class="hidden md:flex gap-10 text-sm text-gray-300">
 
-</div>
-
-<!-- Desktop Nav -->
-
-<nav class="hidden lg:flex items-center gap-12 text-sm tracking-[0.2em] uppercase">
-
-<a href="#chart-room" class="nav-link">
-The Chart Room
-</a>
-
-<a href="#rituals" class="nav-link">
-Distance Rituals
-</a>
-
-<a href="#proof" class="nav-link">
-Global Proof
-</a>
-
-<a href="#intake" class="nav-link">
-Sanctuary Intake
-</a>
+<a href="#services" class="hover:text-amber-300">Services</a>
+<a href="#process" class="hover:text-amber-300">Process</a>
+<a href="#apply" class="hover:text-amber-300">Apply</a>
 
 </nav>
 
-<!-- Right Side -->
-
-<div class="hidden lg:flex items-center gap-5">
-
-<select class="bg-transparent border border-white/10 rounded-full px-4 py-2 text-sm">
-
-<option>$ USD</option>
-<option>$ AUD</option>
-<option>£ GBP</option>
-
-</select>
-
-<button class="gold-button px-7 py-3 rounded-full">
-
-Request Private Consultation
-
+<button class="btn-gold">
+Request Assessment
 </button>
-
-</div>
-
-<!-- Mobile -->
-
-<button id="menuBtn" class="lg:hidden">
-
-<svg width="28" height="28" fill="none" stroke="white" stroke-width="2">
-<path d="M4 7h20M4 14h20M4 21h20"/>
-</svg>
-
-</button>
-
-</div>
 
 </div>
 
 </header>
 
-<!-- ========================= -->
-<!-- MOBILE MENU -->
-<!-- ========================= -->
-
-<div
-id="mobileMenu"
-class="hidden fixed inset-0 bg-[#030712]/95 backdrop-blur-2xl z-[100]">
-
-<div class="h-full flex flex-col justify-center items-center gap-10">
-
-<a href="#chart-room" class="text-2xl tracking-widest">
-The Chart Room
-</a>
-
-<a href="#rituals" class="text-2xl tracking-widest">
-Distance Rituals
-</a>
-
-<a href="#proof" class="text-2xl tracking-widest">
-Global Proof
-</a>
-
-<a href="#intake" class="text-2xl tracking-widest">
-Sanctuary Intake
-</a>
-
-<button class="gold-button px-10 py-4 rounded-full mt-8">
-Enter Sanctuary
-</button>
-
-</div>
-
-</div>
-
-<!-- ========================= -->
 <!-- HERO -->
-<!-- ========================= -->
+<section class="min-h-screen flex items-center justify-center px-6 pt-32">
 
-<section class="relative min-h-screen flex items-center overflow-hidden">
+<div class="max-w-4xl text-center">
 
-<div class="hero-glow top-0 left-0"></div>
-<div class="hero-glow bottom-0 right-0"></div>
-
-<div class="max-w-7xl mx-auto px-6 lg:px-10 text-center">
-
-<div class="pt-32">
-
-<p class="uppercase tracking-[0.4em] text-amber-300 text-sm">
-
-Private Global Spiritual Advisory
-
-</p>
-
-<h1 class="serif mt-8 text-6xl md:text-7xl lg:text-8xl leading-tight max-w-6xl mx-auto">
-
-<span class="gold-gradient">
-
-Align Your Destiny With Elite Vedic Wisdom
-
+<h2 class="text-5xl md:text-6xl leading-tight">
+<span class="gold">
+Ancient Vedic Insight
 </span>
+<br>
+Modern Life Clarity
+</h2>
 
-</h1>
-
-<p class="max-w-4xl mx-auto mt-10 text-xl text-slate-300 leading-relaxed">
-
-Bespoke planetary chart configurations,
-karmic path clearing,
-and pristine distance Pujas performed on your behalf at India’s highest-vibrational ancient energy repositories.
-
+<p class="mt-6 text-gray-400 text-lg leading-relaxed">
+Private Vedic chart assessments designed to help you understand career direction, relationships, finances, health patterns, and life transitions through structured planetary analysis.
 </p>
 
-<!-- Trust Badges -->
+<div class="mt-10 flex flex-col md:flex-row gap-4 justify-center">
 
-<div class="flex flex-wrap justify-center gap-4 mt-12">
-
-<div class="badge px-6 py-3 rounded-full text-amber-300 text-sm">
-
-100% Client Anonymity Assured
-
-</div>
-
-<div class="badge px-6 py-3 rounded-full text-amber-300 text-sm">
-
-White-Glove Global Concierge
-
-</div>
-
-<div class="badge px-6 py-3 rounded-full text-amber-300 text-sm">
-
-Serving Seekers in 45+ Nations
-
-</div>
-
-</div>
-
-<!-- CTA -->
-
-<div class="mt-16 flex flex-col md:flex-row justify-center gap-6">
-
-<button class="gold-button px-10 py-5 rounded-full text-lg">
-
-Configure Your Birth Map
-
+<button class="btn-gold">
+Request Private Assessment
 </button>
 
-<button class="glass px-10 py-5 rounded-full text-lg">
-
-Explore Sacred Offerings
-
+<button class="glass px-8 py-4">
+Learn How It Works
 </button>
 
 </div>
 
 </div>
 
+</section>
+
+<!-- TRUST STRIP -->
+<section class="px-6 pb-20">
+
+<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 text-center">
+
+<div class="glass p-6">Private & Confidential</div>
+<div class="glass p-6">Global Clients (USA, UK, AU)</div>
+<div class="glass p-6">Structured Written Reports</div>
+
 </div>
 
 </section>
-
 <!-- ========================= -->
-<!-- CHART ROOM -->
+<!-- CORE SERVICE -->
 <!-- ========================= -->
 
-<section
-id="chart-room"
-class="section-padding">
+<section id="services" class="px-6 py-28">
 
-<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="max-w-6xl mx-auto text-center">
 
-<div class="text-center mb-20">
-
-<p class="tracking-[0.4em] text-amber-300 uppercase text-sm">
-
-Premium Astrology Intelligence
-
-</p>
-
-<h2 class="serif text-5xl md:text-6xl mt-6">
-
-<span class="gold-gradient">
-
-The Chart Room
-
-</span>
-
+<h2 class="text-4xl md:text-5xl">
+<span class="gold">Private Vedic Chart Assessment</span>
 </h2>
 
-<p class="max-w-3xl mx-auto mt-8 text-slate-400 text-lg">
-
-Strategic cosmic analysis crafted for entrepreneurs,
-legacy builders,
-family offices,
-and conscious global citizens.
-
+<p class="mt-6 text-gray-400 max-w-3xl mx-auto leading-relaxed">
+A structured, private analysis of your birth chart designed to provide clarity on life direction, decision-making, and timing across key areas of life.
 </p>
 
 </div>
 
-<div class="grid lg:grid-cols-3 gap-10">
+<div class="max-w-5xl mx-auto mt-16 grid md:grid-cols-2 gap-8">
 
-<!-- CARD 1 -->
+<div class="glass p-8">
 
-<div class="glass rounded-[32px] p-10 luxury-card">
+<h3 class="text-2xl mb-4">What You Receive</h3>
 
-<div class="text-amber-300 text-sm tracking-[0.3em] uppercase mb-6">
-Blueprint I
-</div>
+<ul class="space-y-3 text-gray-300 text-sm leading-relaxed">
 
-<h3 class="serif text-3xl mb-6">
+<li>• Complete Vedic birth chart interpretation</li>
+<li>• Career & professional direction analysis</li>
+<li>• Relationship & marriage guidance</li>
+<li>• Financial & stability indicators</li>
+<li>• Health & lifestyle patterns</li>
+<li>• Key life timing cycles (Dasha analysis)</li>
+<li>• Written private report (PDF)</li>
 
-The Lifetime Cosmic Map
-
-</h3>
-
-<p class="text-slate-300 leading-loose">
-
-Comprehensive multi-generational Dasha cycle tracking,
-planetary timing intelligence,
-wealth cycles,
-career trajectory forecasting,
-and karmic opportunity mapping.
-
-</p>
-
-<div class="mt-10 text-amber-400 text-2xl font-bold">
-
-Starting at $250 USD
+</ul>
 
 </div>
 
-<a href="#" class="inline-block mt-8 text-amber-300">
+<div class="glass p-8">
 
-Initiate Chart Analysis →
+<h3 class="text-2xl mb-4">Ideal For</h3>
 
-</a>
+<ul class="space-y-3 text-gray-300 text-sm">
 
-</div>
+<li>• Career uncertainty or transition</li>
+<li>• Relationship clarity</li>
+<li>• Business decision timing</li>
+<li>• Relocation decisions (USA / Australia / UK)</li>
+<li>• Life direction confusion</li>
+<li>• Long-term planning alignment</li>
 
-<!-- CARD 2 -->
-
-<div class="glass rounded-[32px] p-10 luxury-card">
-
-<div class="text-amber-300 text-sm tracking-[0.3em] uppercase mb-6">
-Blueprint II
-</div>
-
-<h3 class="serif text-3xl mb-6">
-
-Karmic Obstacle Neutralisation
-
-</h3>
-
-<p class="text-slate-300 leading-loose">
-
-Deep diagnosis of Saturn pressure cycles,
-Manglik influences,
-Rahu-Ketu disruptions,
-ancestral karmic friction,
-and remedy architecture.
-
-</p>
-
-<div class="mt-10 text-amber-400 text-2xl font-bold">
-
-Starting at $350 USD
-
-</div>
-
-<a href="#" class="inline-block mt-8 text-amber-300">
-
-Initiate Chart Analysis →
-
-</a>
-
-</div>
-
-<!-- CARD 3 -->
-
-<div class="glass rounded-[32px] p-10 luxury-card">
-
-<div class="text-amber-300 text-sm tracking-[0.3em] uppercase mb-6">
-Blueprint III
-</div>
-
-<h3 class="serif text-3xl mb-6">
-
-Ethereal Partnership Syncing
-
-</h3>
-
-<p class="text-slate-300 leading-loose">
-
-Compatibility intelligence for marriages,
-strategic ventures,
-family succession structures,
-and conscious partnerships.
-
-</p>
-
-<div class="mt-10 text-amber-400 text-2xl font-bold">
-
-Starting at $425 USD
-
-</div>
-
-<a href="#" class="inline-block mt-8 text-amber-300">
-
-Initiate Chart Analysis →
-
-</a>
-
-</div>
+</ul>
 
 </div>
 
@@ -546,425 +203,77 @@ Initiate Chart Analysis →
 </section>
 
 <!-- ========================= -->
-<!-- GLOBAL CONCIERGE RITUALS -->
+<!-- PROCESS SECTION -->
 <!-- ========================= -->
 
-<section
-id="rituals"
-class="section-padding relative overflow-hidden">
+<section id="process" class="px-6 py-28">
 
-<div class="absolute inset-0 bg-gradient-to-b from-transparent via-amber-500/5 to-transparent"></div>
+<div class="max-w-6xl mx-auto text-center">
 
-<div class="max-w-7xl mx-auto px-6 lg:px-10 relative">
-
-<div class="grid lg:grid-cols-2 gap-16 items-center">
-
-<!-- LEFT CONTENT -->
-
-<div>
-
-<p class="uppercase tracking-[0.35em] text-amber-300 text-sm">
-
-Luxury Ritual Concierge
-
-</p>
-
-<h2 class="serif text-5xl md:text-6xl mt-6 leading-tight">
-
-<span class="gold-gradient">
-
-Global Distance Sacred Rituals
-
-</span>
-
+<h2 class="text-4xl md:text-5xl">
+<span class="gold">How It Works</span>
 </h2>
 
-<p class="mt-10 text-slate-300 leading-loose text-lg">
-
-Physical distance ceases to exist in pure conscious fields.
-Our highly trained English-speaking Vedic masters project
-your personal name, family lineage, birth information,
-and sacred intent through a formal Sankalpa ceremony
-performed at carefully selected energetic temple locations.
-
+<p class="mt-6 text-gray-400">
+A structured 4-step private advisory process
 </p>
 
-<p class="mt-8 text-slate-300 leading-loose text-lg">
-
-Every ritual is individually commissioned and documented.
-Following completion, clients receive high-definition video
-archives, ceremonial photography, and energized Prasad
-dispatched internationally through priority courier networks.
-
-</p>
-
-<div class="grid grid-cols-2 gap-5 mt-12">
-
-<div class="glass rounded-3xl p-6">
-
-<div class="text-3xl font-bold text-amber-300">
-45+
 </div>
 
-<div class="mt-2 text-slate-400">
-Countries Served
+<div class="max-w-5xl mx-auto mt-16 grid md:grid-cols-4 gap-6">
+
+<div class="glass p-6 text-center">
+<div class="text-amber-300 text-2xl">1</div>
+<p class="mt-3">Submit Application</p>
 </div>
 
+<div class="glass p-6 text-center">
+<div class="text-amber-300 text-2xl">2</div>
+<p class="mt-3">Chart Calculation</p>
 </div>
 
-<div class="glass rounded-3xl p-6">
-
-<div class="text-3xl font-bold text-amber-300">
-100%
+<div class="glass p-6 text-center">
+<div class="text-amber-300 text-2xl">3</div>
+<p class="mt-3">Deep Analysis</p>
 </div>
 
-<div class="mt-2 text-slate-400">
-Private Handling
+<div class="glass p-6 text-center">
+<div class="text-amber-300 text-2xl">4</div>
+<p class="mt-3">Private Report Delivery</p>
 </div>
 
 </div>
 
-</div>
+<div class="max-w-4xl mx-auto mt-14 text-center text-gray-400 text-sm leading-relaxed">
 
-</div>
-
-<!-- RIGHT SIDE -->
-
-<div class="space-y-8">
-
-<!-- YAJNA 1 -->
-
-<div
-class="relative rounded-[36px] overflow-hidden h-[320px] luxury-card border border-white/10">
-
-<img
-src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?auto=format&fit=crop&w=1600&q=80"
-class="absolute inset-0 w-full h-full object-cover"
-alt="Temple Ritual">
-
-<div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/30"></div>
-
-<div class="absolute inset-0 p-10 flex flex-col justify-end">
-
-<div class="text-amber-300 tracking-[0.3em] uppercase text-sm">
-
-Flagship Wealth Ceremony
-
-</div>
-
-<h3 class="serif text-3xl mt-4">
-
-Mahalakshmi Multi-Generational Wealth Yajna
-
-</h3>
-
-<p class="text-slate-300 mt-4 max-w-md">
-
-Designed for abundance activation,
-prosperity expansion,
-legacy protection,
-and generational wealth alignment.
-
-</p>
-
-<div class="mt-6 text-amber-400 text-2xl font-bold">
-
-$500 USD
-
-</div>
-
-</div>
-
-</div>
-
-<!-- YAJNA 2 -->
-
-<div
-class="relative rounded-[36px] overflow-hidden h-[320px] luxury-card border border-white/10">
-
-<img
-src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80"
-class="absolute inset-0 w-full h-full object-cover"
-alt="Sacred Ceremony">
-
-<div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/30"></div>
-
-<div class="absolute inset-0 p-10 flex flex-col justify-end">
-
-<div class="text-amber-300 tracking-[0.3em] uppercase text-sm">
-
-Protective Healing Ceremony
-
-</div>
-
-<h3 class="serif text-3xl mt-4">
-
-Maha Mrityunjaya Vital Health & Lineage Shield
-
-</h3>
-
-<p class="text-slate-300 mt-4 max-w-md">
-
-Focused on energetic protection,
-vitality reinforcement,
-family wellness,
-and spiritual resilience.
-
-</p>
-
-<div class="mt-6 text-amber-400 text-2xl font-bold">
-
-$650 USD
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+No confusion. No multiple packages. One structured assessment
+delivered privately with clarity and discretion.
 
 </div>
 
 </section>
 
-
-
 <!-- ========================= -->
-<!-- TESTIMONIALS -->
+<!-- TRUST SECTION -->
 <!-- ========================= -->
 
-<section
-id="proof"
-class="section-padding">
+<section class="px-6 py-20">
 
-<div class="max-w-7xl mx-auto px-6 lg:px-10">
+<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
 
-<div class="text-center mb-20">
-
-<p class="uppercase tracking-[0.35em] text-amber-300 text-sm">
-
-Global Client Experiences
-
-</p>
-
-<h2 class="serif text-5xl md:text-6xl mt-6">
-
-<span class="gold-gradient">
-
-Global Seeker Proof
-
-</span>
-
-</h2>
-
-<p class="max-w-3xl mx-auto mt-8 text-slate-400">
-
-Trusted by entrepreneurs,
-investors,
-executives,
-and conscious families across multiple continents.
-
-</p>
-
+<div class="glass p-6 text-center">
+<p class="text-amber-300">Confidential</p>
+<p class="text-sm text-gray-400 mt-2">All data handled privately</p>
 </div>
 
-<!-- TESTIMONIAL GRID -->
-
-<div class="grid lg:grid-cols-3 gap-8">
-
-<!-- REVIEW 1 -->
-
-<div class="glass rounded-[32px] p-8 luxury-card">
-
-<div class="text-amber-300 text-4xl mb-6">
-“
+<div class="glass p-6 text-center">
+<p class="text-amber-300">Global Clients</p>
+<p class="text-sm text-gray-400 mt-2">USA • UK • Australia</p>
 </div>
 
-<p class="text-slate-300 leading-loose">
-
-The chart reading was startlingly precise.
-Several business timing indicators aligned
-perfectly with major acquisitions completed
-during the previous year.
-
-</p>
-
-<div class="border-t border-white/10 mt-8 pt-6">
-
-<h4 class="font-semibold">
-Victoria S.
-</h4>
-
-<p class="text-slate-500 text-sm mt-1">
-Beverly Hills, USA
-</p>
-
-</div>
-
-</div>
-
-<!-- REVIEW 2 -->
-
-<div class="glass rounded-[32px] p-8 luxury-card lg:mt-16">
-
-<div class="text-amber-300 text-4xl mb-6">
-“
-</div>
-
-<p class="text-slate-300 leading-loose">
-
-The professionalism exceeded expectations.
-Communication was elegant,
-the ritual archive was beautifully documented,
-and the sacred package arrived in Melbourne
-within days.
-
-</p>
-
-<div class="border-t border-white/10 mt-8 pt-6">
-
-<h4 class="font-semibold">
-Julian C.
-</h4>
-
-<p class="text-slate-500 text-sm mt-1">
-Melbourne, Australia
-</p>
-
-</div>
-
-</div>
-
-<!-- REVIEW 3 -->
-
-<div class="glass rounded-[32px] p-8 luxury-card">
-
-<div class="text-amber-300 text-4xl mb-6">
-“
-</div>
-
-<p class="text-slate-300 leading-loose">
-
-Confidential,
-highly refined,
-and deeply insightful.
-It felt more like a private family office
-than a traditional spiritual service.
-
-</p>
-
-<div class="border-t border-white/10 mt-8 pt-6">
-
-<h4 class="font-semibold">
-Charlotte M.
-</h4>
-
-<p class="text-slate-500 text-sm mt-1">
-London, United Kingdom
-</p>
-
-</div>
-
-</div>
-
-<!-- REVIEW 4 -->
-
-<div class="glass rounded-[32px] p-8 luxury-card">
-
-<div class="text-amber-300 text-4xl mb-6">
-“
-</div>
-
-<p class="text-slate-300 leading-loose">
-
-The clarity around family decisions
-and long-term planning was extraordinary.
-The recommendations felt practical,
-grounded,
-and remarkably accurate.
-
-</p>
-
-<div class="border-t border-white/10 mt-8 pt-6">
-
-<h4 class="font-semibold">
-Nathan R.
-</h4>
-
-<p class="text-slate-500 text-sm mt-1">
-Texas, USA
-</p>
-
-</div>
-
-</div>
-
-<!-- REVIEW 5 -->
-
-<div class="glass rounded-[32px] p-8 luxury-card lg:-mt-10">
-
-<div class="text-amber-300 text-4xl mb-6">
-“
-</div>
-
-<p class="text-slate-300 leading-loose">
-
-The ritual documentation,
-video presentation,
-and ceremonial packaging were exceptional.
-Every detail reflected care and excellence.
-
-</p>
-
-<div class="border-t border-white/10 mt-8 pt-6">
-
-<h4 class="font-semibold">
-Emily T.
-</h4>
-
-<p class="text-slate-500 text-sm mt-1">
-Sydney, Australia
-</p>
-
-</div>
-
-</div>
-
-<!-- REVIEW 6 -->
-
-<div class="glass rounded-[32px] p-8 luxury-card">
-
-<div class="text-amber-300 text-4xl mb-6">
-“
-</div>
-
-<p class="text-slate-300 leading-loose">
-
-Among the most sophisticated spiritual
-consulting experiences I have encountered.
-Private,
-discreet,
-and extremely well organised.
-
-</p>
-
-<div class="border-t border-white/10 mt-8 pt-6">
-
-<h4 class="font-semibold">
-Edward L.
-</h4>
-
-<p class="text-slate-500 text-sm mt-1">
-Manchester, UK
-</p>
-
-</div>
-
-</div>
-
+<div class="glass p-6 text-center">
+<p class="text-amber-300">Structured Reports</p>
+<p class="text-sm text-gray-400 mt-2">Clear actionable insights</p>
 </div>
 
 </div>
@@ -972,145 +281,70 @@ Manchester, UK
 </section>
 
 <!-- ========================= -->
-<!-- SANCTUARY INTAKE -->
+<!-- START APPLICATION (PREVIEW FORM SECTION) -->
 <!-- ========================= -->
 
-<section
-id="intake"
-class="section-padding relative">
+<section id="apply" class="px-6 py-28">
 
-<div class="absolute inset-0 bg-gradient-to-b from-transparent via-amber-500/5 to-transparent"></div>
-
-<div class="max-w-4xl mx-auto px-6 relative">
-
-<div class="glass rounded-[40px] p-8 md:p-14 border border-amber-500/10">
+<div class="max-w-4xl mx-auto">
 
 <div class="text-center">
 
-<p class="uppercase tracking-[0.35em] text-amber-300 text-sm">
-
-Private Client Onboarding
-
-</p>
-
-<h2 class="serif text-5xl md:text-6xl mt-6">
-
-<span class="gold-gradient">
-
-The Sanctuary Data Intake
-
-</span>
-
+<h2 class="text-4xl md:text-5xl">
+<span class="gold">Request Private Assessment</span>
 </h2>
 
-<p class="text-slate-400 mt-8 max-w-2xl mx-auto">
-
-All submitted information is handled with strict discretion
-and used exclusively for chart preparation and ceremonial
-configuration.
-
+<p class="mt-6 text-gray-400">
+Begin your confidential Vedic analysis request
 </p>
 
 </div>
 
-<form class="mt-14 space-y-6">
+<div class="glass mt-12 p-10">
 
-<!-- NAME -->
+<form class="space-y-6">
 
-<input
-type="text"
-placeholder="Full Name"
-class="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-6 py-5 focus:outline-none focus:border-amber-400 transition">
+<input type="text" placeholder="Full Name"
+class="w-full p-4 rounded-xl bg-black/40 border border-white/10">
 
-<!-- EMAIL -->
+<input type="email" placeholder="Email Address"
+class="w-full p-4 rounded-xl bg-black/40 border border-white/10">
 
-<input
-type="email"
-placeholder="Secure Email Address"
-class="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-6 py-5 focus:outline-none focus:border-amber-400 transition">
+<div class="grid md:grid-cols-2 gap-4">
 
-<!-- WHATSAPP -->
+<input type="date"
+class="w-full p-4 rounded-xl bg-black/40 border border-white/10">
 
-<div class="grid md:grid-cols-2 gap-6">
-
-<select
-class="bg-slate-900/50 border border-white/10 rounded-2xl px-6 py-5 focus:outline-none focus:border-amber-400">
-
-<option>🇺🇸 +1 USA</option>
-<option>🇬🇧 +44 UK</option>
-<option>🇦🇺 +61 Australia</option>
-<option>🇨🇦 +1 Canada</option>
-<option>🇮🇳 +91 India</option>
-
-</select>
-
-<input
-type="text"
-placeholder="WhatsApp Number"
-class="bg-slate-900/50 border border-white/10 rounded-2xl px-6 py-5 focus:outline-none focus:border-amber-400">
+<input type="time"
+class="w-full p-4 rounded-xl bg-black/40 border border-white/10">
 
 </div>
 
-<!-- DOB -->
+<input type="text" placeholder="Birth City & Country"
+class="w-full p-4 rounded-xl bg-black/40 border border-white/10">
 
-<div class="grid md:grid-cols-2 gap-6">
+<select class="w-full p-4 rounded-xl bg-black/40 border border-white/10 text-gray-300">
 
-<input
-type="date"
-class="bg-slate-900/50 border border-white/10 rounded-2xl px-6 py-5 focus:outline-none focus:border-amber-400">
-
-<input
-type="time"
-class="bg-slate-900/50 border border-white/10 rounded-2xl px-6 py-5 focus:outline-none focus:border-amber-400">
-
-</div>
-
-<!-- BIRTH PLACE -->
-
-<input
-type="text"
-placeholder="Birth City / Country"
-class="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-6 py-5 focus:outline-none focus:border-amber-400">
-
-<!-- GOAL -->
-
-<select
-class="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-6 py-5 focus:outline-none focus:border-amber-400">
-
-<option>Global Venture Expansion</option>
-
-<option>Harmonic Soul Alignment</option>
-
-<option>Spiritual Liberation & Freedom</option>
+<option>Select Primary Focus Area</option>
+<option>Career Direction</option>
+<option>Marriage / Relationships</option>
+<option>Business Decisions</option>
+<option>Financial Growth</option>
+<option>Health & Vitality</option>
+<option>Life Direction Clarity</option>
 
 </select>
 
-<!-- MESSAGE -->
+<textarea placeholder="Describe your current situation or questions..."
+class="w-full p-4 rounded-xl bg-black/40 border border-white/10 h-32"></textarea>
 
-<textarea
-rows="6"
-placeholder="Share any additional intentions, goals, concerns, or specific questions..."
-class="w-full bg-slate-900/50 border border-white/10 rounded-2xl px-6 py-5 focus:outline-none focus:border-amber-400 resize-none"></textarea>
-
-<!-- BUTTON -->
-
-<button
-type="submit"
-class="gold-button w-full py-6 rounded-2xl text-lg">
-
-Transmit Cosmic Profile Data
-
+<button class="btn-gold w-full">
+Submit for Private Review
 </button>
 
-<div class="text-center pt-3">
-
-<p class="text-slate-500 text-sm">
-
-SSL Data Privacy Encryption · Stripe Global Payment Architecture Secured
-
+<p class="text-xs text-gray-500 text-center mt-4">
+Your information is used only for chart analysis. No sharing. No tracking.
 </p>
-
-</div>
 
 </form>
 
@@ -1119,209 +353,106 @@ SSL Data Privacy Encryption · Stripe Global Payment Architecture Secured
 </div>
 
 </section>
-
-
-
 <!-- ========================= -->
-<!-- FOOTER -->
+<!-- FINAL TRUST / FOOTER -->
 <!-- ========================= -->
 
-<footer class="border-t border-white/5">
+<footer class="px-6 py-20 border-t border-white/10">
 
-<div class="max-w-7xl mx-auto px-6 py-20">
-
-<div class="grid lg:grid-cols-4 gap-12">
+<div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-10">
 
 <!-- BRAND -->
-
 <div>
-
-<h3 class="serif text-2xl text-amber-300 tracking-[0.25em]">
-
+<h3 class="text-2xl tracking-[0.3em] text-amber-300">
 VEDICAURA
-
 </h3>
 
-<p class="text-slate-400 mt-6 leading-loose">
-
-Elite Vedic Astrology,
-Distance Sacred Rituals,
-and Global Spiritual Advisory
-for discerning international clients.
-
+<p class="text-gray-400 text-sm mt-4 leading-relaxed">
+Private Vedic Advisory providing structured life clarity through
+traditional astrological intelligence and personalized analysis.
 </p>
-
 </div>
 
-<!-- SERVICES -->
-
+<!-- LINKS -->
 <div>
-
-<h4 class="text-amber-300 mb-6 uppercase tracking-[0.2em]">
-
-Services
-
-</h4>
-
-<ul class="space-y-4 text-slate-400">
-
-<li>The Lifetime Cosmic Map</li>
-
-<li>Karmic Neutralisation</li>
-
-<li>Compatibility Intelligence</li>
-
-<li>Temple Ritual Programs</li>
-
+<h4 class="text-amber-300 mb-4">Navigation</h4>
+<ul class="space-y-2 text-gray-400 text-sm">
+<li>Services</li>
+<li>Process</li>
+<li>Apply</li>
+<li>Contact</li>
 </ul>
-
 </div>
 
 <!-- LEGAL -->
-
 <div>
-
-<h4 class="text-amber-300 mb-6 uppercase tracking-[0.2em]">
-
-Legal
-
-</h4>
-
-<ul class="space-y-4 text-slate-400">
-
+<h4 class="text-amber-300 mb-4">Legal</h4>
+<ul class="space-y-2 text-gray-400 text-sm">
 <li>Privacy Policy</li>
-
-<li>Terms & Conditions</li>
-
-<li>Data Security</li>
-
-<li>Refund Policy</li>
-
+<li>Terms of Service</li>
+<li>Disclaimer</li>
 </ul>
-
 </div>
 
 <!-- CONTACT -->
-
 <div>
-
-<h4 class="text-amber-300 mb-6 uppercase tracking-[0.2em]">
-
-Concierge
-
-</h4>
-
-<ul class="space-y-4 text-slate-400">
-
+<h4 class="text-amber-300 mb-4">Contact</h4>
+<ul class="space-y-2 text-gray-400 text-sm">
 <li>concierge@vedicaura.com</li>
-
 <li>Global Client Support</li>
-
-<li>Private Consultation Requests</li>
-
+<li>Private Consultations</li>
 </ul>
-
 </div>
 
 </div>
 
-<div class="border-t border-white/5 mt-16 pt-10 text-center">
-
-<p class="tracking-[0.45em] text-xs text-slate-600">
-
-ILLUMINATING THE GLOBAL MATRIX THROUGH THE EYE OF THE VEDAS.
-
-</p>
-
-</div>
-
+<div class="text-center mt-16 text-xs text-gray-600 tracking-[0.3em]">
+ILLUMINATING LIFE CLARITY THROUGH VEDIC INTELLIGENCE
 </div>
 
 </footer>
 
-
-
 <!-- ========================= -->
-<!-- WHATSAPP FLOATING BUTTON -->
+<!-- WHATSAPP FLOAT BUTTON -->
 <!-- ========================= -->
 
-<a
-href="https://wa.me/919993459309"
+<a href="https://wa.me/919999999999"
 target="_blank"
-class="fixed bottom-8 right-8 z-50">
+class="fixed bottom-6 right-6 z-50">
 
-<div class="relative">
+<div class="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-amber-400 flex items-center justify-center shadow-lg hover:scale-110 transition">
 
-<div class="absolute inset-0 rounded-full blur-xl bg-green-500/40 animate-pulse"></div>
-
-<div class="relative w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-amber-400 border border-amber-300 flex items-center justify-center shadow-2xl">
-
-<svg
-xmlns="http://www.w3.org/2000/svg"
-width="28"
-height="28"
-fill="white"
-viewBox="0 0 24 24">
-
-<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.077 4.487.71.306 1.263.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.718 2.006-1.412.248-.694.248-1.289.173-1.412-.074-.124-.272-.198-.57-.347z"/>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="white" viewBox="0 0 24 24">
+<path d="M20.52 3.48A11.86 11.86 0 0012.06 0C5.5 0 .2 5.3.2 11.86c0 2.09.55 4.13 1.6 5.92L0 24l6.42-1.68a11.86 11.86 0 005.64 1.43h.01c6.56 0 11.86-5.3 11.86-11.86 0-3.15-1.23-6.11-3.41-8.41z"/>
 </svg>
-
-</div>
 
 </div>
 
 </a>
 
-
-
 <!-- ========================= -->
-<!-- JAVASCRIPT -->
+<!-- SIMPLE ANIMATION SCRIPT -->
 <!-- ========================= -->
 
 <script>
 
-/* Mobile Menu */
+// Smooth reveal on scroll
+const elements = document.querySelectorAll('.glass');
 
-const menuBtn = document.getElementById("menuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
-
-menuBtn.addEventListener("click", () => {
-mobileMenu.classList.toggle("hidden");
-});
-
-mobileMenu.addEventListener("click", () => {
-mobileMenu.classList.add("hidden");
-});
-
-
-/* Scroll Reveal */
-
-const observer = new IntersectionObserver((entries)=>{
-
-entries.forEach(entry=>{
-
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
 if(entry.isIntersecting){
-
-entry.target.style.opacity="1";
-entry.target.style.transform="translateY(0px)";
-
+entry.target.style.opacity = 1;
+entry.target.style.transform = "translateY(0px)";
 }
-
 });
+}, { threshold: 0.1 });
 
-},{
-threshold:0.15
-});
-
-document.querySelectorAll('.luxury-card').forEach(card=>{
-
-card.style.opacity='0';
-card.style.transform='translateY(40px)';
-card.style.transition='all .8s ease';
-
-observer.observe(card);
-
+elements.forEach(el => {
+el.style.opacity = 0;
+el.style.transform = "translateY(20px)";
+el.style.transition = "all 0.6s ease";
+observer.observe(el);
 });
 
 </script>
