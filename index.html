@@ -24,12 +24,68 @@
     .nav-links a { color: #595959; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 14px; transition: color 0.3s; }
     .nav-links a:hover { color: #ff9f1c; }
 
-    /* Hero Section */
-    .hero { background: linear-gradient(rgba(60, 22, 66, 0.85), rgba(60, 22, 66, 0.85)), url('https://unsplash.com') no-repeat center center/cover; color: #ffffff; text-align: center; padding: 100px 20px; }
+    /* Enhanced Sliding Background Hero Container */
+    .hero { 
+      position: relative; 
+      height: 550px; 
+      overflow: hidden; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Background Slider Engine (Layered Behind Content) */
+    .hero-slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300%; /* Total width for 3 sliding frames */
+      height: 100%;
+      display: flex;
+      animation: slidingBackground 18s ease-in-out infinite; 
+      z-index: 1;
+    }
+
+    /* Individual Image Frame Configurations */
+    .slide {
+      width: 33.333%; /* Equal fraction for each of the 3 images */
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* High-Trust Contrast Overlay for Text Readability */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(44, 15, 49, 0.88), rgba(44, 15, 49, 0.88));
+      z-index: 2; /* Sits directly in front of moving images */
+    }
+
+    /* Foreground Content Positioning */
+    .hero-content {
+      position: relative;
+      z-index: 3; /* Floating above overlay and image track */
+      text-align: center; 
+      padding: 0 20px;
+    }
     .hero h1 { color: #ff9f1c; font-size: 42px; margin-bottom: 15px; }
-    .hero p { max-width: 700px; margin: 0 auto 30px auto; font-size: 18px; font-weight: 300; opacity: 0.9; }
+    .hero p { max-width: 700px; margin: 0 auto 30px auto; font-size: 18px; font-weight: 300; opacity: 0.9; color: #ffffff; }
     .cta-btn { background-color: #ff9f1c; color: #ffffff; padding: 12px 30px; text-decoration: none; border-radius: 4px; font-weight: 600; display: inline-block; transition: background 0.3s; }
     .cta-btn:hover { background-color: #e08510; }
+
+    /* Pure CSS Linear Sliding Animation Track */
+    @keyframes slidingBackground {
+      0%, 28% { transform: translateX(0); }             /* Frame 1 displays */
+      33%, 61% { transform: translateX(-33.333%); }     /* Transitions & holds Frame 2 */
+      66%, 94% { transform: translateX(-66.666%); }     /* Transitions & holds Frame 3 */
+      100% { transform: translateX(0); }                /* Snaps back cleanly to Frame 1 */
+    }
 
     /* Main Container */
     .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
@@ -64,7 +120,7 @@
     .submit-btn:hover { background-color: #e08510; }
 
     /* Footer */
-    footer { background-color: #3c1642; color: #ffffff; text-align: center; padding: 30px 20px; margin-top: 8px; font-size: 14px; opacity: 0.9; }
+    footer { background-color: #3c1642; color: #ffffff; text-align: center; padding: 30px 20px; margin-top: 80px; font-size: 14px; opacity: 0.9; }
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
@@ -87,11 +143,21 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Sliding Background Hero Section -->
   <section class="hero">
-    <h1>Authentic Vedic Pujas Organized on Your Behalf</h1>
-    <p>Conducted by certified Vedic pandits with strict adherence to Shastras. Serving clients across the USA and Australia with complete process transparency.</p>
-    <a href="#services" class="cta-btn">View Sacred Services</a>
+    <!-- Automated Background Slider Layer -->
+    <div class="hero-slider">
+      <div class="slide" style="background-image: url('https://unsplash.com');"></div>
+      <div class="slide" style="background-image: url('https://unsplash.com');"></div>
+      <div class="slide" style="background-image: url('https://unsplash.com');"></div>
+    </div>
+    
+    <!-- Content Overlay Floating on Top -->
+    <div class="hero-content">
+      <h1>Authentic Vedic Pujas Organized on Your Behalf</h1>
+      <p>Conducted by certified Vedic pandits with strict adherence to Shastras. Serving clients across the USA and Australia with complete process transparency.</p>
+      <a href="#services" class="cta-btn">View Sacred Services</a>
+    </div>
   </section>
 
   <div class="container">
@@ -133,54 +199,3 @@
         <img src="https://unsplash.com" alt="Navagraha Shanti" class="card-img">
         <div class="card-content">
           <h3>Navagraha Shanti Homa</h3>
-          <p>Designed specifically based on your birth chart data to balance negative planetary aspects (Dasha influences) and maximize positive cycles.</p>
-          <div class="price">$250 USD</div>
-          <a href="#book" class="order-btn">Request Puja</a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Booking Form Section -->
-    <div style="margin-top: 80px;">
-      <h2 id="book" class="section-title">Schedule & Intake Form</h2>
-      
-      <!-- IMPORTANT: Replace 'YOUR_UNIQUE_ID' with the key given by Formspree after registration -->
-      <form action="https://formspree.io" method="POST" class="form-section">
-        
-        <div class="form-group">
-          <label for="name">Full Name (For Sankalpa)</label>
-          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="_replyto" placeholder="name@domain.com" required>
-        </div>
-
-        <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-          <div>
-            <label for="dob">Date of Birth</label>
-            <input type="date" id="dob" name="dob" required>
-          </div>
-          <div>
-            <label for="tob">Exact Time of Birth</label>
-            <input type="time" id="tob" name="tob" required>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="pob">Place of Birth (City, Country)</label>
-          <input type="text" id="pob" name="pob" placeholder="e.g., New York, USA" required>
-        </div>
-
-        <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-          <div>
-            <label for="gotra">Gotra (If known)</label>
-            <input type="text" id="gotra" name="gotra" placeholder="e.g., Kashyapa / Shiva">
-          </div>
-          <div>
-            <label for="service">Select Ritual Offering</label>
-            <select id="service" name="service" required>
-              <option value="Maha Ganapati Puja">Maha Ganapati Puja ($125)</option>
-              <option value="Sri Satyanarayan Vrat">Sri Satyanarayan Vrat ($175)</option>
