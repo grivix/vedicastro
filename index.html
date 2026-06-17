@@ -1,267 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vedic Pujas | Authentic Rituals & Astrology Services</title>
+  <!-- Google Fonts for a premium look -->
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reset & Base Styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; color: #2d2d2d; background-color: #fcfbfa; line-height: 1.6; }
+    
+    /* Typography Anchors */
+    h1, h2, h3 { font-family: 'Cinzel', serif; color: #3c1642; letter-spacing: 1px; }
+    
+    /* Header & Navigation */
+    header { background-color: #ffffff; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 24px; font-weight: 700; color: #3c1642; text-decoration: none; }
+    .nav-links a { color: #595959; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 14px; transition: color 0.3s; }
+    .nav-links a:hover { color: #ff9f1c; }
 
-<title>VedicAura | Private Vedic Advisory</title>
+    /* Hero Section */
+    .hero { background: linear-gradient(rgba(60, 22, 66, 0.85), rgba(60, 22, 66, 0.85)), url('https://unsplash.com') no-repeat center center/cover; color: #ffffff; text-align: center; padding: 100px 20px; }
+    .hero h1 { color: #ff9f1c; font-size: 42px; margin-bottom: 15px; }
+    .hero p { max-width: 700px; margin: 0 auto 30px auto; font-size: 18px; font-weight: 300; opacity: 0.9; }
+    .cta-btn { background-color: #ff9f1c; color: #ffffff; padding: 12px 30px; text-decoration: none; border-radius: 4px; font-weight: 600; display: inline-block; transition: background 0.3s; }
+    .cta-btn:hover { background-color: #e08510; }
 
-<script src="https://cdn.tailwindcss.com"></script>
+    /* Main Container */
+    .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+    .section-title { text-align: center; margin-bottom: 40px; font-size: 32px; position: relative; padding-bottom: 15px; }
+    .section-title::after { content: ''; width: 60px; height: 3px; background-color: #ff9f1c; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    /* Etsy-Style Product Grid */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+    .card { background-color: #ffffff; border: 1px solid #eae6e1; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.02); transition: transform 0.3s; }
+    .card:hover { transform: translateY(-5px); }
+    .card-img { width: 100%; height: 240px; object-fit: cover; }
+    .card-content { padding: 25px; }
+    .card h3 { font-size: 20px; margin-bottom: 10px; }
+    .price { font-size: 22px; font-weight: 600; color: #ff9f1c; margin: 15px 0; }
+    .card p { font-size: 14px; color: #666; margin-bottom: 20px; }
+    
+    /* Order/Form Button */
+    .order-btn { display: block; text-align: center; background-color: #3c1642; color: #ffffff; padding: 10px; text-decoration: none; border-radius: 4px; font-weight: 600; transition: background 0.3s; }
+    .order-btn:hover { background-color: #55205e; }
 
-<style>
+    /* Transparency Section */
+    .transparency-box { background-color: #f0e6f2; border-left: 5px solid #3c1642; padding: 30px; border-radius: 4px; margin-bottom: 60px; }
+    .transparency-box h2 { font-size: 24px; margin-bottom: 10px; }
 
-body{
-margin:0;
-background:#030712;
-color:#E5E7EB;
-font-family:Inter, sans-serif;
-overflow-x:hidden;
-}
+    /* Form Section */
+    .form-section { background-color: #ffffff; border: 1px solid #eae6e1; border-radius: 8px; padding: 40px; max-width: 700px; margin: 0 auto; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 14px; color: #3c1642; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-family: 'Inter', sans-serif; font-size: 15px; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #3c1642; outline: none; }
+    .submit-btn { background-color: #ff9f1c; color: white; border: none; padding: 14px 20px; width: 100%; border-radius: 4px; font-weight: 600; font-size: 16px; cursor: pointer; transition: background 0.3s; }
+    .submit-btn:hover { background-color: #e08510; }
 
-h1,h2,h3{
-font-family:"Cormorant Garamond", serif;
-}
+    /* Footer */
+    footer { background-color: #3c1642; color: #ffffff; text-align: center; padding: 30px 20px; margin-top: 8px; font-size: 14px; opacity: 0.9; }
 
-/* Background */
-.bg{
-position:fixed;
-inset:0;
-background:
-radial-gradient(circle at 20% 20%, rgba(251,191,36,0.06), transparent 40%),
-radial-gradient(circle at 80% 30%, rgba(59,130,246,0.05), transparent 40%),
-radial-gradient(circle at 50% 80%, rgba(255,255,255,0.03), transparent 50%);
-z-index:-1;
-}
-
-/* Glass */
-.glass{
-background:rgba(15,23,42,0.55);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,0.08);
-border-radius:24px;
-}
-
-/* Gold */
-.gold{
-background:linear-gradient(90deg,#FDE68A,#FBBF24,#D97706);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-/* Buttons */
-.btn-gold{
-background:linear-gradient(135deg,#FDE68A,#FBBF24,#D97706);
-color:#111827;
-padding:14px 26px;
-border-radius:999px;
-font-weight:600;
-transition:0.3s;
-}
-
-.btn-gold:hover{
-transform:translateY(-2px);
-}
-
-.btn-outline{
-border:1px solid rgba(255,255,255,0.15);
-padding:14px 26px;
-border-radius:999px;
-transition:0.3s;
-}
-
-.btn-outline:hover{
-border-color:#FBBF24;
-color:#FBBF24;
-}
-
-section{
-padding:120px 20px;
-max-width:1100px;
-margin:auto;
-}
-
-</style>
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .nav-container { flex-direction: column; gap: 15px; }
+      .hero h1 { font-size: 32px; }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="bg"></div>
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">VAIDIKA JYOTISH</a>
+      <div class="nav-links">
+        <a href="#services">Our Pujas</a>
+        <a href="#transparency">Transparency Policy</a>
+        <a href="#book">Book a Consultation</a>
+      </div>
+    </div>
+  </header>
 
-<!-- NAV -->
-<header class="fixed w-full top-0 z-50 bg-black/30 backdrop-blur-xl border-b border-white/5">
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Authentic Vedic Pujas Organized on Your Behalf</h1>
+    <p>Conducted by certified Vedic pandits with strict adherence to Shastras. Serving clients across the USA and Australia with complete process transparency.</p>
+    <a href="#services" class="cta-btn">View Sacred Services</a>
+  </section>
 
-<div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+  <div class="container">
+    
+    <!-- Transparency Banner -->
+    <div id="transparency" class="transparency-box">
+      <h2>100% Video Proof & Transparency</h2>
+      <p>We understand the distance. For every single Puja organized on your behalf, you will receive a personalized **Sankalpa video clip** featuring your name/birth details, followed by an unlisted HD recording or private live stream link of the entire ritual execution.</p>
+    </div>
 
-<div class="text-amber-300 tracking-[0.3em]">
-VEDICAURA
-</div>
+    <!-- Services Grid -->
+    <h2 id="services" class="section-title">Sacred Puja Offerings</h2>
+    <div class="grid">
+      
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="https://unsplash.com" alt="Ganesha Puja" class="card-img">
+        <div class="card-content">
+          <h3>Maha Ganapati Puja</h3>
+          <p>For removing institutional obstacles, blessing new business ventures, and bringing overall prosperity to your household harmony.</p>
+          <div class="price">$125 USD</div>
+          <a href="#book" class="order-btn">Request Puja</a>
+        </div>
+      </div>
 
-<div class="hidden md:flex gap-8 text-sm text-gray-300">
-<a href="#services">Services</a>
-<a href="#process">Process</a>
-<a href="#apply">Apply</a>
-</div>
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="https://unsplash.com" alt="Satyanarayan Puja" class="card-img">
+        <div class="card-content">
+          <h3>Sri Satyanarayan Vrat</h3>
+          <p>Performed on auspicious Purnima (Full Moon) days to bring peace, spiritual abundance, health, and grace to family members.</p>
+          <div class="price">$175 USD</div>
+          <a href="#book" class="order-btn">Request Puja</a>
+        </div>
+      </div>
 
-<button class="btn-gold">
-Request Analysis
-</button>
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="https://unsplash.com" alt="Navagraha Shanti" class="card-img">
+        <div class="card-content">
+          <h3>Navagraha Shanti Homa</h3>
+          <p>Designed specifically based on your birth chart data to balance negative planetary aspects (Dasha influences) and maximize positive cycles.</p>
+          <div class="price">$250 USD</div>
+          <a href="#book" class="order-btn">Request Puja</a>
+        </div>
+      </div>
 
-</div>
+    </div>
 
-</header>
+    <!-- Booking Form Section -->
+    <div style="margin-top: 80px;">
+      <h2 id="book" class="section-title">Schedule & Intake Form</h2>
+      
+      <!-- IMPORTANT: Replace 'YOUR_UNIQUE_ID' with the key given by Formspree after registration -->
+      <form action="https://formspree.io" method="POST" class="form-section">
+        
+        <div class="form-group">
+          <label for="name">Full Name (For Sankalpa)</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
 
-<!-- HERO -->
-<section class="text-center pt-[160px]">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="_replyto" placeholder="name@domain.com" required>
+        </div>
 
-<h1 class="text-5xl md:text-6xl leading-tight text-white">
-Ancient Vedic Insight<br>
-<span class="gold">For Modern Life Decisions</span>
-</h1>
+        <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div>
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+          </div>
+          <div>
+            <label for="tob">Exact Time of Birth</label>
+            <input type="time" id="tob" name="tob" required>
+          </div>
+        </div>
 
-<p class="mt-6 text-gray-400 max-w-2xl mx-auto">
-Private Vedic chart analysis designed to give clarity on career, relationships, finances, and life direction through structured astrological intelligence.
-</p>
+        <div class="form-group">
+          <label for="pob">Place of Birth (City, Country)</label>
+          <input type="text" id="pob" name="pob" placeholder="e.g., New York, USA" required>
+        </div>
 
-<div class="mt-10 flex flex-col md:flex-row justify-center gap-4">
-
-<button class="btn-gold">Request Private Assessment</button>
-<button class="btn-outline">How It Works</button>
-
-</div>
-
-</section>
-
-<!-- TRUST -->
-<section class="grid md:grid-cols-3 gap-6 text-center">
-
-<div class="glass p-6">Private & Confidential</div>
-<div class="glass p-6">Global Clients (USA / UK / AU)</div>
-<div class="glass p-6">Structured Reports</div>
-
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-
-<h2 class="text-4xl text-center">
-<span class="gold">Private Chart Assessment</span>
-</h2>
-
-<p class="text-center text-gray-400 mt-4 max-w-2xl mx-auto">
-One complete analysis of your life path, timing cycles, strengths, challenges, and opportunities.
-</p>
-
-<div class="grid md:grid-cols-2 gap-6 mt-12">
-
-<div class="glass p-8">
-<h3 class="text-xl text-white mb-4">What You Get</h3>
-<ul class="text-gray-400 space-y-2 text-sm">
-<li>• Career & Business Guidance</li>
-<li>• Relationship Analysis</li>
-<li>• Financial Patterns</li>
-<li>• Health Insights</li>
-<li>• Life Timing Cycles</li>
-<li>• Private PDF Report</li>
-</ul>
-</div>
-
-<div class="glass p-8">
-<h3 class="text-xl text-white mb-4">Best For</h3>
-<ul class="text-gray-400 space-y-2 text-sm">
-<li>Career confusion</li>
-<li>Relationship clarity</li>
-<li>Business decisions</li>
-<li>Relocation (USA / AU / UK)</li>
-<li>Life direction uncertainty</li>
-</ul>
-</div>
-
-</div>
-
-</section>
-
-<!-- PROCESS -->
-<section id="process">
-
-<h2 class="text-4xl text-center">
-<span class="gold">How It Works</span>
-</h2>
-
-<div class="grid md:grid-cols-4 gap-4 mt-12 text-center">
-
-<div class="glass p-6">1<br>Submit Details</div>
-<div class="glass p-6">2<br>Chart Analysis</div>
-<div class="glass p-6">3<br>Deep Review</div>
-<div class="glass p-6">4<br>Report Delivered</div>
-
-</div>
-
-</section>
-
-<!-- APPLY -->
-<section id="apply">
-
-<h2 class="text-4xl text-center">
-<span class="gold">Request Assessment</span>
-</h2>
-
-<div class="glass p-10 mt-10 max-w-3xl mx-auto">
-
-<form class="space-y-4">
-
-<input class="w-full p-4 bg-black/40 border border-white/10 rounded-xl" placeholder="Full Name">
-<input class="w-full p-4 bg-black/40 border border-white/10 rounded-xl" placeholder="Email">
-
-<div class="grid md:grid-cols-2 gap-4">
-<input type="date" class="p-4 bg-black/40 border border-white/10 rounded-xl">
-<input type="time" class="p-4 bg-black/40 border border-white/10 rounded-xl">
-</div>
-
-<input class="w-full p-4 bg-black/40 border border-white/10 rounded-xl" placeholder="Birth City & Country">
-
-<select class="w-full p-4 bg-black/40 border border-white/10 rounded-xl">
-<option>Career Guidance</option>
-<option>Marriage / Relationships</option>
-<option>Business Decisions</option>
-<option>Financial Growth</option>
-<option>Life Direction</option>
-</select>
-
-<textarea class="w-full p-4 bg-black/40 border border-white/10 rounded-xl h-32" placeholder="Describe your situation"></textarea>
-
-<button class="btn-gold w-full">
-Submit for Private Review
-</button>
-
-</form>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
-<footer class="text-center py-20 border-t border-white/10">
-
-<div class="text-amber-300 tracking-[0.3em]">VEDICAURA</div>
-
-<p class="text-gray-500 text-sm mt-4">
-Private Vedic Advisory for Global Clients
-</p>
-
-<p class="text-gray-600 text-xs mt-10">
-ILLUMINATING LIFE THROUGH STRUCTURED VEDIC INTELLIGENCE
-</p>
-
-</footer>
-
-<!-- WHATSAPP -->
-<a href="https://wa.me/919999999999" class="fixed bottom-6 right-6">
-<div class="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center text-white">
-💬
-</div>
-</a>
-
-</body>
-</html>
+        <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div>
+            <label for="gotra">Gotra (If known)</label>
+            <input type="text" id="gotra" name="gotra" placeholder="e.g., Kashyapa / Shiva">
+          </div>
+          <div>
+            <label for="service">Select Ritual Offering</label>
+            <select id="service" name="service" required>
+              <option value="Maha Ganapati Puja">Maha Ganapati Puja ($125)</option>
+              <option value="Sri Satyanarayan Vrat">Sri Satyanarayan Vrat ($175)</option>
